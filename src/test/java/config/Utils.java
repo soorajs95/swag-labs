@@ -9,8 +9,9 @@ import org.openqa.selenium.WebDriver;
 import stepDefinitions.Hooks;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 public class Utils {
@@ -22,7 +23,7 @@ public class Utils {
     public static String readConfig(String config) {
         Properties prop = new Properties();
         try {
-            prop.load(new FileInputStream("src/test/resources/Config.properties"));
+            prop.load(Files.newInputStream(Paths.get("src/test/resources/Config.properties")));
         } catch (IOException e) {
             e.printStackTrace();
         }
