@@ -13,14 +13,11 @@ public class Driver extends Utils {
     static String browser = setValue("browser");
 
     public static WebDriver getBrowserDriver() {
-        switch (browser.toLowerCase()) {
-            case "firefox":
-                return new FirefoxDriver(firefoxOptions());
-            case "edge":
-                return new EdgeDriver(edgeOptions());
-            default:
-                return new ChromeDriver(chromeOptions());
-        }
+        return switch (browser.toLowerCase()) {
+            case "firefox" -> new FirefoxDriver(firefoxOptions());
+            case "edge" -> new EdgeDriver(edgeOptions());
+            default -> new ChromeDriver(chromeOptions());
+        };
     }
 
     public static FirefoxOptions firefoxOptions() {
