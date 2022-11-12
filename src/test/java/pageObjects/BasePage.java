@@ -14,21 +14,21 @@ public class BasePage extends Utils {
 
     WebDriver driver = getDriver();
 
-    protected WebDriverWait webDriverWait() {
+    public WebDriverWait webDriverWait() {
         return new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(setValue("webdriver_wait_timeout"))));
     }
 
-    protected void waitUntilElementVisible(WebElement element) {
+    public void waitUntilElementVisible(WebElement element) {
         webDriverWait().until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected void setText(WebElement element, String text) {
+    public void setText(WebElement element, String text) {
         waitUntilElementVisible(element);
         element.clear();
         element.sendKeys(text);
     }
 
-    protected void elementClick(WebElement element) {
+    public void elementClick(WebElement element) {
         try {
             webDriverWait().until(ExpectedConditions.elementToBeClickable(element));
             element.click();
@@ -37,7 +37,7 @@ public class BasePage extends Utils {
         }
     }
 
-    protected void elementClick(By locator) {
+    public void elementClick(By locator) {
         webDriverWait().until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
     }
