@@ -9,11 +9,10 @@ import org.openqa.selenium.WebDriver;
 
 public class Hooks {
 
-    public static WebDriver driver;
-
     @Before
     public void setUp() {
-        driver = Driver.getBrowserDriver();
+        WebDriver driver = Driver.getBrowserDriver();
+        Driver.addDriverToThreadLocal(driver);
         Utils.setBrowserSize();
     }
 
@@ -21,7 +20,7 @@ public class Hooks {
     public void tearDown(Scenario scenario) {
         if (scenario.isFailed())
             Utils.getScreenshot(scenario);
-        driver.quit();
+        Driver.getDriver().quit();
     }
 
 }

@@ -12,6 +12,16 @@ public class Driver extends Utils {
 
     static final String browser = setValue("browser");
 
+    public static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
+
+    public static void addDriverToThreadLocal(WebDriver driver) {
+        driverThreadLocal.set(driver);
+    }
+
+    public static WebDriver getDriver() {
+        return driverThreadLocal.get();
+    }
+
     public static WebDriver getBrowserDriver() {
         return switch (browser.toLowerCase()) {
             case "firefox" -> new FirefoxDriver(firefoxOptions());

@@ -6,7 +6,6 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import stepDefinitions.Hooks;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +16,7 @@ import java.util.Properties;
 public class Utils {
 
     public static WebDriver getDriver() {
-        return Hooks.driver;
+        return Driver.getDriver();
     }
 
     public static String readConfig(String config) {
