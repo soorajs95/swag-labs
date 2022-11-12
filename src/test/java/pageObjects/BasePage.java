@@ -12,7 +12,7 @@ import java.time.Duration;
 
 public class BasePage extends Utils {
 
-    WebDriver driver = getDriver();
+    final WebDriver driver = getDriver();
 
     public WebDriverWait webDriverWait() {
         return new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(setValue("webdriver_wait_timeout"))));

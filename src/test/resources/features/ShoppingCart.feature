@@ -11,7 +11,7 @@ Feature: Shopping Cart
     And user clicks on the shopping cart icon
     Then user can see the items in the shopping cart
 
-  Scenario: User can remove remove items from the shopping cart
+  Scenario: User can remove items from the shopping cart
     Given user is in swag labs home page
     And user logs in with credentials
       | username | standard_user |

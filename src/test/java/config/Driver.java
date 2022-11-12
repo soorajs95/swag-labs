@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class Driver extends Utils {
 
-    static String browser = setValue("browser");
+    static final String browser = setValue("browser");
 
     public static WebDriver getBrowserDriver() {
         return switch (browser.toLowerCase()) {
