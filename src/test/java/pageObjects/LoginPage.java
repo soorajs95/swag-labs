@@ -18,7 +18,7 @@ public class LoginPage extends BasePage {
     @FindBy(id = "login-button")
     WebElement loginButton;
 
-    @FindBy(css = "data-test=error")
+    @FindBy(css = "[data-test=error]")
     WebElement loginError;
 
     public LoginPage() {

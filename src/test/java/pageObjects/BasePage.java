@@ -43,7 +43,7 @@ public class BasePage extends Utils {
     }
 
     public void navigateToHomePage() {
-        driver.get(readConfig("url"));
+        driver.get(readConfig("test_url"));
     }
 
 }
