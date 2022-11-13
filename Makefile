@@ -1,11 +1,14 @@
-test:
+desktop:
 	mvn clean test -Dheadless=true
 
-test-smoke:
-	mvn clean test -Dheadless=true -Dcucumber.filter.tags=@Smoke
+mobile:
+	mvn clean test -Dheadless=true -Dbrowser_width=375 -Dbrowser_height=842
 
-test-headed:
-	mvn clean test -Dheadless=false
+edge:
+	mvn clean test -Dheadless=true -Dbrowser=edge
+
+smoke:
+	mvn clean test -Dheadless=true -Dcucumber.filter.tags=@Smoke
 
 generate-report:
 	mvn cluecumber-report:reporting

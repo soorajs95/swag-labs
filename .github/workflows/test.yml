@@ -11,6 +11,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        run-test-on: [ desktop, mobile ]
+
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
@@ -21,7 +25,7 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: make test
+        run: make ${{ matrix.run-test-on }}
 
       - name: Generate report
         if: always()
