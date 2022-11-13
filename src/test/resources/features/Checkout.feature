@@ -5,7 +5,9 @@ Feature: Checkout
   Scenario: User should be able to successfully checkout products
     Given user is in swag labs home page
     And user logs in as standard user
-    When user adds fleece-jacket to the shopping cart
+    When user adds items to the shopping cart
+      | backpack      |
+      | fleece-jacket |
     And user clicks on the shopping cart icon
     When user clicks on checkout button
     And user fills in checkout information

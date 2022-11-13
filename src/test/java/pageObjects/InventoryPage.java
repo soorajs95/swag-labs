@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class InventoryPage extends BasePage {
 
     String addToCartButton = "add-to-cart-sauce-labs-%s";
@@ -25,12 +27,16 @@ public class InventoryPage extends BasePage {
         Assert.assertTrue(inventoryContainer.isDisplayed());
     }
 
-    public void addItemToCart(String item) {
-        elementClick(By.id(String.format(addToCartButton, item)));
+    public void addItemsToCart(List<String> items) {
+        for (String item : items) {
+            elementClick(By.id(String.format(addToCartButton, item)));
+        }
     }
 
-    public void removeItemFromCart(String item) {
-        elementClick(By.id(String.format(removeButton, item)));
+    public void removeItemsFromCart(List<String> items) {
+        for (String item : items) {
+            elementClick(By.id(String.format(removeButton, item)));
+        }
     }
 
     public void clickOnShoppingCartIcon() {

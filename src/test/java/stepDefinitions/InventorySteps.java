@@ -5,6 +5,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.InventoryPage;
 
+import java.util.List;
+
 public class InventorySteps {
 
     InventoryPage inventoryPage = new InventoryPage();
@@ -14,9 +16,9 @@ public class InventorySteps {
         inventoryPage.verifyInventoryPageLoaded();
     }
 
-    @When("user adds {} to the shopping cart")
-    public void userAddsToTheShoppingCart(String item) {
-        inventoryPage.addItemToCart(item);
+    @When("user adds items to the shopping cart")
+    public void userAddsItemsToTheShoppingCart(List<String> items) {
+        inventoryPage.addItemsToCart(items);
     }
 
     @And("user clicks on the shopping cart icon")
@@ -24,8 +26,8 @@ public class InventorySteps {
         inventoryPage.clickOnShoppingCartIcon();
     }
 
-    @And("user removes {} from the shopping cart")
-    public void userRemovesFromTheShoppingCart(String item) {
-        inventoryPage.removeItemFromCart(item);
+    @And("user removes items from the shopping cart")
+    public void userRemovesItemsFromTheShoppingCart(List<String> items) {
+        inventoryPage.removeItemsFromCart(items);
     }
 }
