@@ -25,7 +25,7 @@ public class Driver extends Utils {
     public static WebDriver getBrowserDriver() {
         return switch (browser.toLowerCase()) {
             case "firefox" -> new FirefoxDriver(firefoxOptions());
-            case "edge" -> new EdgeDriver();
+            case "edge" -> new EdgeDriver(edgeOptions());
             default -> new ChromeDriver(chromeOptions());
         };
     }
