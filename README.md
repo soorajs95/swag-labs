@@ -24,7 +24,7 @@ Test automation demo project on [Swag Labs](https://www.saucedemo.com/)
 
 ## Pre-requisites
 
-- [Java](https://www.oracle.com/java/technologies/downloads/#java17) 14 or latest should be installed.
+- [Java](https://www.oracle.com/java/technologies/downloads/#java17) 14 or later should be installed
 - [Maven](https://maven.apache.org/download.cgi) should be installed
 
 ## Executing tests
