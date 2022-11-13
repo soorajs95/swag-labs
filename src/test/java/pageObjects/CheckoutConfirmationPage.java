@@ -15,6 +15,6 @@ public class CheckoutConfirmationPage extends BasePage {
     }
 
     public void verifyCheckoutConfirmation() {
-        Assert.assertTrue(checkoutCompleteContainer.isDisplayed());
+        Assert.assertFalse(checkoutCompleteContainer.isDisplayed());
     }
 }
