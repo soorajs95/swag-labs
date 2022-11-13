@@ -4,9 +4,7 @@ Feature: Checkout
   @Smoke
   Scenario: User should be able to successfully checkout products
     Given user is in swag labs home page
-    And user logs in with credentials
-      | username | standard_user |
-      | password | secret_sauce  |
+    And user logs in as standard user
     When user adds fleece-jacket to the shopping cart
     And user clicks on the shopping cart icon
     When user clicks on checkout button

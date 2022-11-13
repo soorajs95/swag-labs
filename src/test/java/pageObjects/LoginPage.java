@@ -31,6 +31,12 @@ public class LoginPage extends BasePage {
         elementClick(loginButton);
     }
 
+    public void login(String userType) {
+        setText(userNameInput, setValue(userType));
+        setText(passwordInput, setValue("password"));
+        elementClick(loginButton);
+    }
+
     public void verifyLoginError() {
         Assert.assertTrue(loginError.isDisplayed());
     }

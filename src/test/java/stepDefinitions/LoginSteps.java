@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,5 +25,10 @@ public class LoginSteps {
     @Then("user should see login error")
     public void userShouldSeeLoginError() {
         loginPage.verifyLoginError();
+    }
+
+    @And("user logs in as {} user")
+    public void userLogsInAsUser(String userType) {
+        loginPage.login(userType);
     }
 }
