@@ -7,6 +7,9 @@ mobile:
 edge:
 	mvn clean test -Dheadless=true -Dbrowser=edge
 
+firefox:
+	mvn clean test -Dheadless=true -Dbrowser=firefox
+
 smoke:
 	mvn clean test -Dheadless=true -Dcucumber.filter.tags=@Smoke
 
