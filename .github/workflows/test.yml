@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        run-test-on: [ desktop, mobile, edge, firefox ]
+        run-test-on: [ chrome, edge, firefox, mobile ]
 
     steps:
       - uses: actions/checkout@v3
