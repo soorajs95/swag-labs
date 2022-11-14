@@ -6,13 +6,12 @@ Test automation demo project on [Swag Labs](https://www.saucedemo.com/)
 
 ## Features
 
-- Parallel tests - Tests can run in parallel(Feature files)
+- Parallel tests - Feature files can run in parallel
+- Threadsafe web-driver - Drivers are thread safe to support parallel execution
 - Multiple browser support - Tests can run in chrome, edge or firefox
 - Responsive web test support - Tests can be run in desktop or mobile dimensions
-- Threadsafe web-driver - Drivers are thread safe to support parallel execution
-- Parameterized tests - Tests can run with different data sets from feature file
-- Test tags - Tests can be run using tags e.g. @Smoke, @Login
-- Continuous Integration - Connected to Github CI
+- Continuous Integration - Connected to [Github Actions](https://github.com/soorajs95/swag-labs/actions) CI configured
+  to run tests in different browsers and dimensions
 
 ## Tech Stack
 

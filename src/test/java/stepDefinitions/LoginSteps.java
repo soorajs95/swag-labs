@@ -27,7 +27,7 @@ public class LoginSteps {
         loginPage.verifyLoginError();
     }
 
-    @And("user logs in as {} user")
+    @And("^user logs in as (standard|locked_out|problem|performance_glitch) user$")
     public void userLogsInAsUser(String userType) {
         loginPage.login(userType);
     }
